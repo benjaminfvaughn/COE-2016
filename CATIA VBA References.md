@@ -1,1 +1,3 @@
-CATIA>VBA IDE>Tools>References
+CATIA>VBA IDE>Tools>References...
+
+This file will contain information about CATIA VBA Reference Libraries.
