@@ -1,6 +1,4 @@
-Attribute VB_Name = "trainpieces"
 Public Sub pieces()
-
 
 Dim currentuser As String
 Dim bk As Workbook
@@ -20,19 +18,23 @@ CATIA.RefreshDisplay = False
 Dim objPart As Variant
 Set objPart = CATIA.ActiveDocument.Product
 
-Dim objSel As Selection
+Dim objSel As Variant
 Set objSel = CATIA.ActiveDocument.Selection
 
-Dim objPartCollection As Products
+Dim objPartCollection As Variant
 Set objPartCollection = objPart.Products
 
-Dim objSubPartCollection As Products
+Dim objSubPartCollection As Variant
 
 CATIA.RefreshDisplay = False
 
 'Create the Excel report
 Set objEXCELapp = CreateObject("EXCEL.Application")
 Set bk = Application.ActiveWorkbook
+
+'Rename the first sheet in the new workbook "Track Pieces"
+bk.Sheets(1).Name = "Track Pieces"
+
 Set sh = bk.Sheets("Track Pieces")
 
 sh.Cells.Select
@@ -79,13 +81,10 @@ bk.Save
 bk.Saved = True
 
 'objEXCELApp.DisplayAlerts = False
-objEXCELapp.Workbooks.Close
+'objEXCELapp.Workbooks.Close
 
 
 CATIA.RefreshDisplay = True
 CATIA.DisplayFileAlerts = True
 
 End Sub
-
-
-
