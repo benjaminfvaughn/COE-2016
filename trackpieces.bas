@@ -1,5 +1,6 @@
 Public Sub pieces()
 
+
 Dim currentuser As String
 Dim bk As Workbook
 'sets the variable to the user that is logged into the computer
@@ -18,23 +19,19 @@ CATIA.RefreshDisplay = False
 Dim objPart As Variant
 Set objPart = CATIA.ActiveDocument.Product
 
-Dim objSel As Variant
-Set objSel = CATIA.ActiveDocument.Selection
+Dim objSel As Selection
+Set objSel = CATIA.ActiveDocument.Selectionmaterial
 
-Dim objPartCollection As Variant
+Dim objPartCollection As Products
 Set objPartCollection = objPart.Products
 
-Dim objSubPartCollection As Variant
+Dim objSubPartCollection As Products
 
 CATIA.RefreshDisplay = False
 
 'Create the Excel report
 Set objEXCELapp = CreateObject("EXCEL.Application")
 Set bk = Application.ActiveWorkbook
-
-'Rename the first sheet in the new workbook "Track Pieces"
-bk.Sheets(1).Name = "Track Pieces"
-
 Set sh = bk.Sheets("Track Pieces")
 
 sh.Cells.Select
@@ -60,12 +57,16 @@ Selection.ClearContents
     'Assigns the columns that will contain the part information
     labelcol = firstempty
     typecol = labelcol + 1
-    
+    materialcol = labelcol + 2
+    densitycol = labelcol + 3
+    volumecol = labelcol + 4
     
     'Sets the header information for each column
     sh.Cells(1, labelcol) = "Part Name"
     sh.Cells(1, typecol) = "Type"
-       
+    sh.Cells(1, materialcol) = "Material"
+    sh.Cells(1, densitycol) = "Density"
+    sh.Cells(1, volumecol) = "Volume"
    
     'returns the number of parts in the product
     sh.Cells(2, typecol) = numero
@@ -74,6 +75,9 @@ Selection.ClearContents
     For I = 1 To numero
         sh.Cells(2 + I, labelcol) = objPart.Products.Item(I).Name
         sh.Cells(2 + I, typecol) = objPart.Products.Item(I).Parameters.Item("Type").ValueAsString
+        sh.Cells(2 + I, materialcol) = objPart.Products.Item(I).Parameters.Item("Material").ValueAsString
+        sh.Cells(2 + I, densitycol) = objPart.Products.Item(I).Parameters.Item("Density").ValueAsString
+        sh.Cells(2 + I, volumecol) = objPart.Products.Item(I).Parameters.Item("Volume").ValueAsString
     Next I
     '""""""""""""""""""""""""""""""""""""""""""
 'saves the workbook and tells excel that the workbook is saved to prevent error messages
@@ -81,7 +85,7 @@ bk.Save
 bk.Saved = True
 
 'objEXCELApp.DisplayAlerts = False
-'objEXCELapp.Workbooks.Close
+objEXCELapp.Workbooks.Close
 
 
 CATIA.RefreshDisplay = True
