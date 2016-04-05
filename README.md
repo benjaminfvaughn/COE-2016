@@ -11,4 +11,7 @@ is a VBA script that uses CATIA as the host application. It prints the part name
 is a VBA script that uses Excel as the host application. It prints the part name, count of parts, and value of the "Type" parameter in an Excel worksheet. This .bas file can be imported into a Excel VBA Project.
 
 ## TrainTrack_Assembly.zip
-is the assebmly used in the demonstration of the code demonstrated with freefileout.txt and trainpieces.bas.
+is the assembly used in the demonstration of the code demonstrated with freefileout.txt and trainpieces.bas.
+
+## CATIA VBA References.md
+is a file containing some of the information that we know about CATIA VBA References. Please submit additions and corrections to this file by creating a new branch.
