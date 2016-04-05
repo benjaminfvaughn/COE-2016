@@ -10,5 +10,5 @@ is a VBA script that uses CATIA as the host application. It prints the part name
 ## trainpieces.bas
 is a VBA script that uses Excel as the host application. It prints the part name, count of parts, and value of the "Type" parameter in an Excel worksheet. This .bas file can be imported into a Excel VBA Project.
 
-## TrainTrack_Assembly.CATProduct
+## TrainTrack_Assembly.zip
 is the assebmly used in the demonstration of the code demonstrated with freefileout.txt and trainpieces.bas.
