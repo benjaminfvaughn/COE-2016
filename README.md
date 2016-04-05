@@ -3,6 +3,9 @@ Code snippets used in my COE 2016 presentation.
 
 The files in this repository were used in a presentation at the CATIA Operators Exchange (COE) Conference in 2016.
 Learn more about the conference here: http://www.coe.org/2016conference
+To contact me or my co-presenter, use our email addresses:
+* benjamin.vaughn@us.michelin.com
+* trevor.wanamaker@us.michelin.com
 
 ## freefileout.txt
 is a VBA script that uses CATIA as the host application. It prints the part name, index, and value of the "Type" parameter for all of the documents in the active product. This .txt file can be copied and pasted into a new CATIA VBA Module.
