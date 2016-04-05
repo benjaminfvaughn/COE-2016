@@ -2,8 +2,8 @@
 Code snippets used in my COE 2016 presentation.
 
 The files in this repository were used in a presentation at the CATIA Operators Exchange (COE) Conference in 2016.
-Learn more about the conference here: http://www.coe.org/2016conference
-To contact me or my co-presenter, use our email addresses:
+> Learn more about the conference here: http://www.coe.org/2016conference
+> To contact me or my co-presenter, use our email addresses:
 * benjamin.vaughn@us.michelin.com
 * trevor.wanamaker@us.michelin.com
 
