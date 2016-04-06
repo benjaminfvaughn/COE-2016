@@ -1,5 +1,5 @@
-Attribute VB_Name = "Module4"
 Sub freefileout()
+'This procedure uses CATIA as the host application.
 'Loop through the open documents and collect their name and index. Output this data to a CSV.
 'Next steps: save the file to C:\temp with a unique filename to easily collect different feature trees from multiple documents.
 '            categorize the parts based on lamelle, motif, creation lam, etc.
