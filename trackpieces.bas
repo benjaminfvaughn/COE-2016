@@ -1,6 +1,6 @@
 Public Sub pieces()
 'This procedure uses Excel as the host application.
-'
+'Loop through the open documents and collect their name and index. Output this data to an Excel Worksheet.
 
 Dim currentuser As String
 Dim bk As Workbook
