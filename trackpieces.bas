@@ -1,5 +1,6 @@
-Attribute VB_Name = "trackpieces"
 Public Sub pieces()
+'This procedure uses Excel as the host application.
+'
 
 Dim currentuser As String
 Dim bk As Workbook
