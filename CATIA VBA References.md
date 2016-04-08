@@ -7,5 +7,5 @@ Required references for **trackpieces.bas**
 * Microsoft Excel 14.0 Object Library
 
 Required references for **freefileout.bas**
-* foo
-* bar
+* Visual Basic For Applications
+* CATIA V5 ApplicationFrame Object Library
