@@ -5,8 +5,8 @@ The files in this repository were used in a presentation at the CATIA Operators 
 Learn more about the conference here: http://www.coe.org/2016conference  
 
 To contact me or my co-presenter, use our email addresses:  
-* benjamin.vaughn@us.michelin.com
-* trevor.wanamaker@us.michelin.com
+* benjamin.vaughn@michelin.com
+* trevor.wanamaker@michelin.com
 
 You can also find me on Twitter if you prefer more informal means of communication [@ben_v] (https://twitter.com/ben_v)
 
